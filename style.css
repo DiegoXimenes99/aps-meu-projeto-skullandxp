@@ -1,0 +1,141 @@
+/* Importa a fonte retro estilo RPG */
+body {
+  font-family: 'Press Start 2P', cursive;
+  background-color: #121212; /* fundo escuro */
+  color: #f1f1f1; /* texto claro para contraste (WCAG) */
+  margin: 0;
+  padding: 0;
+}
+
+.espacada {
+  margin-top: 50px; 
+}
+
+.bg {
+  background-color: #000; 
+  color: #fff;             
+  padding: 1rem;           
+  border-radius: 8px;     
+}
+
+.img-borda {
+  border: 2px solid #ffffff; 
+  border-radius: 4px;     
+  padding: 4px;           
+}
+
+.img-borda2 {
+  border: 2px solid #ffffff; 
+  border-radius: 5px;     
+  padding: 10px;           
+}
+
+.header {
+  text-align: center;
+  padding: 2rem;
+  background-color: #1a1a1a;
+  border-bottom: 3px solid #f1f1f1;
+}
+
+.subtitle {
+  font-size: 0.7rem;
+  margin-top: 0.5rem;
+}
+
+.nav-menu {
+  background-color: #222;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list li {
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+.nav-list a {
+  color: #f1f1f1;
+  text-decoration: none;
+}
+
+.nav-list a:hover {
+  text-decoration: underline;
+}
+
+.main {
+  padding: 1rem;
+}
+
+.title {
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+figure {
+  text-align: center;
+}
+
+figcaption {
+  font-size: 0.6rem;
+  margin-top: 0.5rem;
+  color: #ccc;
+}
+
+.input-field {
+  display: block;
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.6rem;
+  background-color: #333;
+  color: #f1f1f1;
+  border: 1px solid #888;
+}
+
+.btn-submit {
+  font-family: 'Press Start 2P', cursive;
+  background-color: #00a6ff;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 0.6rem;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background-color: #ff00aa;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #1a1a1a;
+  margin-top: 2rem;
+  font-size: 0.5rem;
+  border-top: 3px solid #f1f1f1;
+}
+
+.msg-sucesso {
+  color: #ff00cc;
+  font-size: 0.7rem;
+  margin-top: 1rem;
+}
+
+/* pequenas letras */
+@media (max-width: 768px) {
+  .title {
+    font-size: 0.8rem;
+  }
+
+  .nav-list li {
+    display: block;
+    margin: 0.5rem 0;
+  }
+}

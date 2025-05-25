@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skull and XP</title>
+  <link rel="icon" type="image/jpg" href="imagem2.jpg" />
+
+  <!-- Fonte estilo retro -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap para layout grid -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+
+  <!-- Seu CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Skull and XP</h1>
+    <p class="subtitle">A aventura começa aqui...</p>
+  </header>
+
+  <nav role="navigation" class="nav-menu">
+    <ul class="nav-list">
+      <li><a href="#" onclick="mostrarSecao('inicio')">Início</a></li>
+      <li><a href="#" onclick="mostrarSecao('galeria')">Galeria</a></li>
+      <li><a href="#" onclick="mostrarSecao('sobre')">Sobre</a></li>
+      <li><a href="#" onclick="mostrarSecao('ranking')">Ranking</a></li>
+      <li><a href="#" onclick="mostrarSecao('registro')">Registro</a></li>
+      <li><a href="#" onclick="mostrarSecao('download')">Download</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- Seção INÍCIO -->
+    <section id="inicio" class="secao">
+      <article class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <figure>
+              <div class="espacador">
+              <img src="imagem1.jpg" class="espacada" alt="Imagem espaçada">
+              </div>
+              <figcaption>Cena clássica do Skull and XP</figcaption>
+            </figure>
+          </div>
+          <div class="col-md-6 bg">
+            <h2 class="title">Bem-vindo ao Skull and XP</h2>
+            <p>Explore masmorras, enfrente monstros e acumule XP em um mundo sombrio e pixelado!</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="container mt-5">
+        <div class="row align-items-center">
+          <div class="col-md-4">
+            <img src="logo.png" alt="Registrar jogador" class="img-fluid" onclick="mostrarSecao('registro')" style="cursor:pointer;" />
+          </div>
+          <div class="col-md-8">
+            <h3>Participe da Aventura!</h3>
+            <p>Cadastre-se agora e entre no ranking dos maiores heróis do Skull and XP.</p>
+            <p class="bg">🔑 Clique na imagem para ir para o REGISTRO</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- Seção GALERIA -->
+    <section id="galeria" class="secao" style="display: none;">
+  <h2 class="title">Galeria Skull and XP</h2>
+  <p>Aqui ficam as imagens desse belo jogo.</p>
+  <div class="container">
+    <div class="row mb-4">
+      <div class="col-md-4">
+        <img src="1.png" alt="Imagem 1"  width="250" class="img-borda" >
+      </div>
+      <div class="col-md-4">
+        <img src="2.png" alt="Imagem 2"  width="250" class="img-borda">
+      </div>
+      <div class="col-md-4">
+        <img src="3.png" alt="Imagem 3"  width="250" class="img-borda">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <img src="4.png" alt="Imagem 4"  width="250" class="img-borda">
+      </div>
+      <div class="col-md-4">
+        <img src="5.png" alt="Imagem 5"  width="250" class="img-borda">
+      </div>
+      <div class="col-md-4">
+        <img src="6.png" alt="Imagem 6"  width="250" class="img-borda">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Seção SOBRE -->
+    <section id="sobre" class="secao" style="display: none;">
+      <h2 class="title">Sobre o Jogo</h2>
+      <p>Skull and XP é site criado para o trabalho do aluno Diego Paiva Batista / Mat: 2024101217 / Turma: 952 - PROGRAMAÇÃO WEB FRONT-END (IHC) 2025/1 </p>
+    </section>
+
+    <!-- Seção RANKING -->
+    <section id="ranking" class="secao" style="display: none;">
+      <h2 class="title">Ranking dos Heróis</h2>
+      <ol>
+        <li>🩸 PlayerOne - 3200 XP</li>
+        <li>🩸 NecroX - 2750 XP</li>
+        <li>🩸 ShadowMage - 2590 XP</li>
+        <li>🩸 owMage - 1590 XP</li>
+        <li>🩸 SMage - 590 XP</li>
+        <li>🩸 XHeroX - 90 XP</li>
+        <li>🩸 Not - 20 XP</li>
+      </ol>
+    </section>
+
+    <!-- Seção REGISTRO -->
+    <section id="registro" class="secao" style="display: none;">
+      <h2 class="title">Registro de Aventureiro</h2>
+      <form onsubmit="enviarRegistro(event)">
+        <input type="text" class="input-field" placeholder="Nome do Jogador" aria-label="Campo para nome" />
+        <input type="email" class="input-field" placeholder="Email" aria-label="Campo para email" />
+        <button type="submit" class="btn-submit">Entrar para a Aventura</button>
+      </form>
+      <p class="escapada"></p>
+      <p>
+        <a href="#" class="bg" onclick="mostrarSecao('inicio')">Voltar para o início</a></p>
+      <p class="msg-sucesso" style="display: none;" >Obrigado por se registrar!</p>
+    </section>
+
+    <!-- Seção Download -->
+    <section id="download" class="secao" style="display: none;">
+      <img src="download.png" class="img-fluid" />
+      <p>Aqui ficaria o download do jogo se ele existisse</p>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Skull and XP. Criado por [Seu Nome].</p>
+    <time datetime="2025-05-16">16 de maio de 2025</time>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
